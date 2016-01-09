@@ -88,5 +88,18 @@ function printMessage()
 "Can Drink Beer"
 "Let it go"
 
+function repeater(howMany, oldEnough){
+	for(var i = 0; i < howMany; i++){
+		if (odlEnough){
+			consol.log('yay:);
+		}els{
+			concole.log('boo';
+		}
+	}
+}
+
+
+
+
 
 
