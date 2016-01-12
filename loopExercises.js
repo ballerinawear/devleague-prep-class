@@ -125,11 +125,15 @@ console.log(i);
 //String values and have the function write a for loop that loops for each number of elements in the Array 
 //and console.log each character as the loop executes.
 
-var myLetters = characters("H", "e", "l", "p");
-for showEachValue(i = 0; i < characters.length; i++) {
-	console.log()
+var myLetters = ["H", "e", "l", "p"];
+function printCharacters(characters){
 
+for (var i = 0; i < characters.length; i++) {
+	console.log(characters[i]);
 }
+}
+printCharacters(myLetters);
+
 //var showEachValue
 
 
@@ -138,25 +142,47 @@ for showEachValue(i = 0; i < characters.length; i++) {
 //Note: You will need to use the Array.push() method to complete this function.
 
 //var createAnArrayFromString
-
-
+ var word = "Aloha";
+ var arr = [];
+ function createWord(word){
+	 for (var i = 0; i < word.length; i++){
+	 	if (word[i]  !== "A" && word[i] !== 'a') {
+		 	arr.push(word[i]);
+		 	console.log(arr);
+	 	}
+	 }
+}
+createWord(word);
 
 //Write a function that takes an Array with any number of type Number and write a for loop to add all numbers 
 //in the Array and return the sum.
 
 //greatSummator
 
-var sumTotal = (2,5,8,12);
-for addNumbers(i = 0; ; ;){
+var arrNumbers = [2,5,8,12];
+var totalNumber = 0;
+function addIt(total){
 
+for (var i = 0; i < arrNumbers.length; i++){
+	totalNumber += arrNumbers[i];
+		console.log(totalNumber);
+	}
+	
 }
+addIt(totalNumber);
 
 //Write a function that takes an Array with any number of type Number and second variable called total. 
 //Return true if the sum of all values in the Array are less than total otherwise return false.
 
 //totalUnderWhatFor
 
+//var myNumbers =[3, 5, 7, 9];
+//var total = 21;
 
+//function (totalUnderWhatFor){
+	//for (i=0; i < total; i++);
+//		if 
+//}
 
 //Write a function that takes an Array with any number of type Boolean values and write a for loop to call
 // our isTrue function with each value as input and return true if all values return true from our isTrue function.
