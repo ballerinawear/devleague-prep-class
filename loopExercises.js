@@ -28,15 +28,15 @@ isNumberGreaterThan(firstNumber, secondNumber);
 //Write a function that takes in a Boolean value named val and have the function return 
 //whether the value is true
 
-function isItTrue(bool){
-	if (bool ===5){
-		console.log("true");
+function isItTrue(val){
+	if (val === true){
+		return true;
 	}else {
-		console.log("false");
+		return false;
 	}
 }
-var myNumber = 5;
-isItTrue(myNumber);
+
+console.log(isItTrue(false));
 
 
 //Write a function that takes in a Boolean value named val and have the function return whether the value is false.
@@ -176,22 +176,92 @@ addIt(totalNumber);
 
 //totalUnderWhatFor
 
-//var myNumbers =[3, 5, 7, 9];
-//var total = 21;
+var myNumbers =[1, 3, 4, 6];
+var sumTotal = 0;
+var total = 14;
 
-//function (totalUnderWhatFor){
-	//for (i=0; i < total; i++);
-//		if 
-//}
+function totalUnderWhatFor(isItTheTotal){
+	for (var i=0; i < myNumbers.length; i++){
+		sumTotal += myNumbers[i];}
+
+			if (sumTotal < total){
+				console.log("true");
+			}else {
+			console.log('false');
+		
+	}
+}
+
+totalUnderWhatFor(sumTotal);
 
 //Write a function that takes an Array with any number of type Boolean values and write a for loop to call
 // our isTrue function with each value as input and return true if all values return true from our isTrue function.
 
-//checkTrueValues
+//Need function takes an array
+
+//var trueFalse = 
+function boolValue(arrayNumbers){
+	for (var i=0; i < arrayNumbers.length; i++){
+		
+	if (isItTrue(arrayNumbers[i]) === true){
+		console.log(true);
+	} else {
+		console.log(false);  //still repeating answers
+		return;
+	}
+}
+}
+
+var arrayNumbers = [true, false, true, true]; 
+//var arrayNumbersT = [true, true, true, true];
+//for loop to call isItTrue function with each value as input
+//return true if all values are true
+
+boolValue(arrayNumbers);
 
 
+//example 2
 
+function isTrue(bool) {
+	return bool === true;
+	}
+	
+	var someArr = [true, false, true];
 
+function checkTrueValue(arr){
+	var isArrTrue = true;
+	for (var i=0; i<arr.length; i++){
+		if (!isTrue(arr[i])){
+			isArrTrue = true;
+		}
+
+	}	
+		console.log(isArrTrue);
+			return isArrTrue;
+}
+
+checkTrueValue(someArr);
+
+//example 3
+
+function isTrue (bool){
+	return bool ===true;
+}
+var someArr = [true, false,true];
+var someArr2 = [true, true, true];
+
+function checkTrueValue(arr){
+	for (var i = 0; i < arr.length; i++){
+		if (!isitTrue(arr[i])){
+			return false;
+	
+		}
+	}
+return true;
+}
+
+console.log(checkTrueValue(sommArr));
+console.log(checkTrueValue(sommArr2));
 
 
 
