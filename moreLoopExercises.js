@@ -15,6 +15,7 @@ var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"];
 
 for (var i=0; i<presidents.length; i++){
 	console.log("Value of i is: " + [i]);
+	//same as console.log("Value of i is:", i);
 	console.log("Value at Index is: " + presidents[i]);
 }
 
@@ -42,24 +43,38 @@ printContent(presidents);
 // After the FOR loop, use console.log to inspect your variable. In the end your String should look like 
 //this 1011121314151617181920
 
-var stringOfNumbers = [];
-var startNumber =  0;
-stringOfNumbers.length=10;
+var stringOfNumbers = '';
 
-function oneLongNumber(string){
-	for (var i=0; i < stringOfNumbers.length; i++) {
-		startNumber += [i];
-		console.log(startNumber);
-	}
+for (var i = 10; i <=20; i++){
+	stringOfNumbers += i;
 }
 
-oneLongNumber(stringOfNumbers);
+console.log(stringOfNumbers);
+
+
+// function oneLongNumber(string){
+// 	for (var i=10; i < 21; i++) {
+// 		startNumber += [i];
+// 		console.log(startNumber);
+// 	}
+// }
+
+// oneLongNumber(stringOfNumbers);
 
 
 // bonus: could you take the code inside of this FOR loop and encapsulate it inside of a function 
 //called appendToString and still achieve the same result?
 
+var stringOfNumbers = '';
 
+function appendToString(stringToAppendTo, stringToAppend){
+	return stringToAppendTo + stringToAppend;
+}
+
+for (var i = 10; i <=20; ++i){
+	stringOfNumbers =appendToString(stringOfNumbers, i);
+}
+console.log (stringOfNumbers);
 
 // 3.  Add only even numbrs to an array
 // Declare a variable named evenNumberArray.
@@ -67,19 +82,13 @@ oneLongNumber(stringOfNumbers);
 //starting with the value 0.
 
 var evenNumberArray = [];
-var evenNumber = [];
-evenNumber.length = 50;
-var evenStartNumber = 0;
 
-for (var i=0; i < evenNumber.length; i++){
-	evenStartNumber = evenNumber[i];
-	if (i%2 !== 0){
-
-	evenNumberArray.push(evenStartNumber);
-	}
+	for (var j = 0; j < 99; j +=2){
+	evenNumberArray.push(j);
+	//modulus operator if (j%2 === 0) and use i++
 }
+console.log(evenNumber);
 
-console.log(evenNumberArray);
 
 // 4.  Accessing only the odd indexes of an Array - 'Not Even Brah'
 // Someone forgot to fill out this array! Oh noes...
@@ -92,6 +101,15 @@ console.log(evenNumberArray);
 
 var oopsArray = ['turn' , ,'down' , , 'for' , , 'what'];
 
+for (var i=0; i< oopsArray.length; i++){
+
+	if (i%2 === 1){
+		//also can do if(!oopsArray[i]){}
+		oopsArray[i] = 'nope';
+		
+	}
+}
+console.log('oopsArray', oopsArray.length, oopsArray);
 
 // 5.  Going backwards?!
 
@@ -107,7 +125,7 @@ var oopsArray = ['turn' , ,'down' , , 'for' , , 'what'];
 // nope
 // turn
 
-
+for (var i = length; )
 
 // 6.  isNapTime
 
