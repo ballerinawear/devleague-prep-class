@@ -125,7 +125,7 @@ console.log('oopsArray', oopsArray.length, oopsArray);
 // nope
 // turn
 
-for (var i = length; )
+for (var i = length; ); //comment
 
 // 6.  isNapTime
 
