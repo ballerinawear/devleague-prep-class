@@ -87,7 +87,7 @@ var evenNumberArray = [];
 	evenNumberArray.push(j);
 	//modulus operator if (j%2 === 0) and use i++
 }
-console.log(evenNumber);
+console.log(evenNumberArray);
 
 
 // 4.  Accessing only the odd indexes of an Array - 'Not Even Brah'
@@ -109,7 +109,7 @@ for (var i=0; i< oopsArray.length; i++){
 		
 	}
 }
-console.log('oopsArray', oopsArray.length, oopsArray);
+console.log(oopsArray);
 
 // 5.  Going backwards?!
 
@@ -125,7 +125,12 @@ console.log('oopsArray', oopsArray.length, oopsArray);
 // nope
 // turn
 
-for (var i = length; ); //comment
+
+for (var i = oopsArray.length -1; i >= 0; i -=1){
+
+console.log(oopsArray[i]);
+}
+
 
 // 6.  isNapTime
 
