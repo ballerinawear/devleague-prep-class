@@ -66,15 +66,16 @@ oneLongNumber(stringOfNumbers);
 // Use a FOR loop to add only even numbers to an Array. Add 50 even numbers to the evenNumberArray 
 //starting with the value 0.
 
-var evenNumbers = [];
 var evenNumberArray = [];
-evenNumberArray.length = 50;
+var evenNumber = [];
+evenNumber.length = 50;
 var evenStartNumber = 0;
 
-for (var i=0; i < evenNumberArray.length; i++){
+for (var i=0; i < evenNumber.length; i++){
+	evenStartNumber = evenNumber[i];
 	if (i%2 !== 0){
-	evenNumbers.push(evenNumbers[i]);
 
+	evenNumberArray.push(evenStartNumber);
 	}
 }
 
@@ -89,7 +90,7 @@ console.log(evenNumberArray);
 // Example result should look like:
 // `[ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]`
 
-
+var oopsArray = ['turn' , ,'down' , , 'for' , , 'what'];
 
 
 // 5.  Going backwards?!
