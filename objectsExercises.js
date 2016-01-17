@@ -29,7 +29,8 @@ var plainBox = {};
 // 2.  An object with properties declared line by line
 
 // Declare a variable named stockCar and set its value to be an object with its key-value pairs 
-//separated by commas (,). This is a way of declaring a new object and also being able to add property names and values at the moment an object is created.
+//separated by commas (,). This is a way of declaring a new object and also being able to add 
+//property names and values at the moment an object is created.
 
 // add a key named model and set its value to the name of an American car manufacturer.
 // add a key named year and set it to be a value above 2000 but below 2016.
@@ -37,25 +38,68 @@ var plainBox = {};
 // add a key named driver and set it to be null.
 // add a key named passengers and set it to be an empty array.
 
+var stockCar = {model: "Ford", year: 2015, automaticTransmission: true, driver: null, passengers: []};
+
+console.log (stockCar);
 
 // 3.  Add new property inside a function
 
 // Declare a variable named plainPerson. Set its value to be an empty object with no properties.
 
-// Next, declare a function named buildPerson and then define three parameters. The first parameter will be named person and the second will be nameString and the third will be age. Within this function you will modify the person object by:
+// Next, declare a function named buildPerson and then define three parameters. 
+//The first parameter will be named person and the second will be nameString and the third will be age.
+// Within this function you will modify the person object by:
 
 // adding a property called name and set its value to be the second parameter.
 // adding a property called age and set its value to be the third parameter.
 
 // The function will return the first parameter.
 
-// Finally, invoke your new function while passing in the plainPerson object and additional agrument values, then store the return value. Use console.log three times to print the entire object, just the value at name, and just the value at age.
+// Finally, invoke your new function while passing in the plainPerson object and additional agrument 
+//values, then store the return value. Use console.log three times to print the entire object, just the value at name, and just the value at age.
+
+// var plainPerson = {};
+
+// function buildPerson() {
+// 	this.person = 
+// 	this.nameString =
+// 	this.age = 
+// }
 
 // 4.  Display values of objects that are inside an array
 
 // Declare a new variable named arrayOfObjects and set it to be this array of objects.
 
-// Declare a new function named printProcessedOrdersand set one parameter called orders. Within this function you will use console.log to print order details to the page.
+// Declare a new function named printProcessedOrders and set one parameter called orders. 
+//Within this function you will use console.log to print order details to the page.
+
+var arrayOfObjects = {
+	id: '',
+	purchaseDate: '',
+	purchaseTotal: ''
+};
+var order0 = {
+	id: 0,
+	purchaseDate: "Monday Jan 25 2015 2:01 PM",
+	purchaseTotal: 279.38
+};
+
+var order1 ={
+	id: 1,
+	purchaseDate: "Monday Jan 27 2015 11:31 AM",
+	purchaseTotal: 79.80
+};
+
+var order2 = {
+	id: 2,
+	purchaseDate: "Monday Feb 1 2015 7:56 AM",
+	purchaseTotal: 15.62
+};
+
+	function printProcessedOrders(orders){
+		console.log(printProcessedOrders(arrayOfObjects));
+	}
+
 
 // Example output:
 
