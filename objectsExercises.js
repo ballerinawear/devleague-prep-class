@@ -3,16 +3,33 @@
 
 // Declare a variable named plainBox and set its value to be an empty object.
 
-// Next, you will add three properties to this object. Each property declaration expression will be on its own line and ending with semicolons (;). This is just one way of adding properties to an object.
+// Next, you will add three properties to this object. Each property declaration expression will be 
+//on its own line and ending with semicolons (;). This is just one way of adding properties to an object.
 
 // Add a property named color and set it the name of any color.
 // Add a property named size and set it to a number value between 0 and 20.
 // Add a property named contents and set it to be an empty array.
 
+var plainBox = {};
+	plainBox.color = '';
+	plainBox.size = 5;
+	plainBox.contents = [];
+
+	console.log(plainBox);
+
+// function plainBox() {
+// 	plainBox.color = '';
+// 	plainBox.size = 5;
+// 	plainBox.contents = [];
+// }
+
+// var myBox = plainBox("red", size, "stuff");
+// console.log(plainbox(myBox));
 
 // 2.  An object with properties declared line by line
 
-// Declare a variable named stockCar and set its value to be an object with its key-value pairs separated by commas (,). This is a way of declaring a new object and also being able to add property names and values at the moment an object is created.
+// Declare a variable named stockCar and set its value to be an object with its key-value pairs 
+//separated by commas (,). This is a way of declaring a new object and also being able to add property names and values at the moment an object is created.
 
 // add a key named model and set its value to the name of an American car manufacturer.
 // add a key named year and set it to be a value above 2000 but below 2016.
