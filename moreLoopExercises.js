@@ -198,8 +198,8 @@ console.log(copyOfValuesArray);
 
 //8.   Stage 1 - Only String Values
 
-// Declare a variable named miscStorage set it's value to be: [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."},
-//'Mush' ]
+// Declare a variable named miscStorage set it's value to be: [ [], 'Carrots', 9, 'Beets', {}, 
+//{name: "Todd B."}, 'Mush' ]
 
 // Declare a function named generateArrayOfStrings which takes a single argument storage. 
 //This function returns a new Array with only String values inside of i
@@ -207,13 +207,23 @@ console.log(copyOfValuesArray);
 var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush'];
 
 function generateArrayOfStrings(storage){
-
+	var strStorage = [];
+	for (var i = 0; i < storage.length; i++){
+		var storedValue = storage[i];
+		if (typeof(storedValue) === 'string'){
+			strStorage.push(storedValue);
+		}
+		
+	}
+	return strStorage;
 }
-
+ 
+ console.log(generateArrayOfStrings(miscStorage));
 
 // 9.  Final Form - Change values of objects stored within an Array
 
-// It's that time again, we need to graduate the current class of students and start enrollment for the next class.
+// It's that time again, we need to graduate the current class of students and start enrollment for 
+//the next class.
 
 // Declare a variable named currentClass and set it's value to be this array found here.
 
@@ -230,6 +240,61 @@ var currentClass = [];
 function graduateAndSetNewClass(enrolled){
 
 }
+
+//
+
+var currentClass = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+];
+
+function graduateAndSetNewClass(graduatingClass) {
+    for (var i = 0; i < graduatingClass.length; i++) {
+        var student = graduatingClass[i];
+        if (student.enrolled) {
+            student.graduated = true;
+        } else {
+            student.enrolled = true;
+        }
+    }
+}
+
+console.log(currentClass);
+graduateAndSetNewClass(currentClass);
+console.log(currentClass); // <-- notice the changes
 
 
 
