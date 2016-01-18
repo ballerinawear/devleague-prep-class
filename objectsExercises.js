@@ -56,15 +56,19 @@ console.log (stockCar);
 // The function will return the first parameter.
 
 // Finally, invoke your new function while passing in the plainPerson object and additional agrument 
-//values, then store the return value. Use console.log three times to print the entire object, just the value at name, and just the value at age.
+//values, then store the return value. Use console.log three times to print the entire object, 
+//just the value at name, and just the value at age.
 
 // var plainPerson = {};
 
-// function buildPerson() {
-// 	this.person = 
-// 	this.nameString =
-// 	this.age = 
+// function buildPerson(person, nameString, age) {
+// 	this.person = person;
+// 	this.nameString = nameString;
+// 	this.age = age;
 // }
+// var john = new buildPerson(man, John, 20);
+
+// console.log(buildPerson(john));
 
 // 4.  Display values of objects that are inside an array
 
@@ -73,32 +77,53 @@ console.log (stockCar);
 // Declare a new function named printProcessedOrders and set one parameter called orders. 
 //Within this function you will use console.log to print order details to the page.
 
-var arrayOfObjects = {
-	id: '',
-	purchaseDate: '',
-	purchaseTotal: ''
-};
-var order0 = {
-	id: 0,
-	purchaseDate: "Monday Jan 25 2015 2:01 PM",
-	purchaseTotal: 279.38
-};
+// var arrayOfObjects = {
+// 	id: '',
+// 	purchaseDate: '',
+// 	purchaseTotal: ''
+// };
 
-var order1 ={
-	id: 1,
-	purchaseDate: "Monday Jan 27 2015 11:31 AM",
-	purchaseTotal: 79.80
-};
+// function printProcessedOrders(id, purchaseDate, purchaseTotal){
+// 	this.id: = id;
+// 	this.purchaseDate = purchaseDate;
+// 	this.purchaseTotal = purchaseTotal;
+// }
+// var order0 = new printProcessedOrders(0, "Monday Jan 25 2015 2:01 PM", 279.38);
 
-var order2 = {
-	id: 2,
-	purchaseDate: "Monday Feb 1 2015 7:56 AM",
-	purchaseTotal: 15.62
-};
 
-	function printProcessedOrders(orders){
-		console.log(printProcessedOrders(arrayOfObjects));
-	}
+// var order0 = {
+// 	id: 0,
+// 	purchaseDate: "Monday Jan 25 2015 2:01 PM",
+// 	purchaseTotal: 279.38
+// };
+
+// var order1 ={
+// 	id: 1,
+// 	purchaseDate: "Monday Jan 27 2015 11:31 AM",
+// 	purchaseTotal: 79.80
+// };
+
+// var order2 = {
+// 	id: 2,
+// 	purchaseDate: "Monday Feb 1 2015 7:56 AM",
+// 	purchaseTotal: 15.62
+// };
+
+// 	function printProcessedOrders(orders){
+// 		console.log(arrayOfObjects);
+// 	}
+
+function arrayOfObjects(idNo, purchaseDate, purchaseTotal){
+	this.idNo = idNo;
+	this.purchaseDate = purchaseDate;
+	this.purchaseTotal= purchaseTotal;
+}
+
+var id0 = new arrayOfObjects(0, "Monday Jan 25 2015 2:01 PM", 279.38);
+var id1 = new arrayOfObjects(1, "monday Jan 27 2015 11:31 AM", 79.80);
+var id2 = new arrayOfObjects(2, "Monday Feb 1 2015 7.56 AM", 15.62);
+
+console.log(arrayOfObjects(id0));
 
 
 // Example output:
@@ -121,22 +146,33 @@ var order2 = {
 
 // Declare a new variable and set it to be a new object with the properties a, b, and result.
 
-// Declare a new function. Declare the first parameter, which will be an object. Within this function, you will access the values stored a and b of the object being passed in. Add the these values and store the sum to this object's result property. This function will return the object.
+// Declare a new function. Declare the first parameter, which will be an object. Within this function, 
+//you will access the values stored a and b of the object being passed in. Add the these values 
+//and store the sum to this object's result property. This function will return the object.
 
-// Invoke your function and pass in your object, store the result to a variable and use console.log to inspect your results.
+// Invoke your function and pass in your object, store the result to a variable and use 
+//console.log to inspect your results.
 
 // Go ahead and create some more objects and pass them to this function. Have fun with it.
 
+// var newObject =  {num1: a, num2: b, sumab: a + b};
+
+// function 
+
 // 6.  Print sum function and add as new key-value
 
-// Declare a new function and a single parameter which will be the object from the challenge just above. Within this function you are to print to the screen a message of the operation performed. For Example:
+// Declare a new function and a single parameter which will be the object from the challenge just above.
+// Within this function you are to print to the screen a message of the operation performed.
+// For Example:
 
 // // if this object was passed into your function: { a: 10, b:67, result: 77 }
 // // it should print a message saying
 // '10 + 67 = 77'
-// Before returning this object, add a new property to it named output and set it to be the message that was printed out.
+// Before returning this object, add a new property to it named output and set it to be the message 
+//that was printed out.
 
-// Invoke this function and pass in your object. Further test by changing the values of the object being passed in or create more objects and invoke your function multiple times.
+// Invoke this function and pass in your object. Further test by changing the values of the object 
+//being passed in or create more objects and invoke your function multiple times.
 
 // 7.  Putting stuff in plainBox
 
