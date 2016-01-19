@@ -11,9 +11,10 @@
 // Add a property named contents and set it to be an empty array.
 
 var plainBox = {};
-	plainBox.color = '';
+	plainBox.color = 'red';
 	plainBox.size = 5;
 	plainBox.contents = [];
+
 
 	console.log(plainBox);
 
@@ -38,7 +39,13 @@ var plainBox = {};
 // add a key named driver and set it to be null.
 // add a key named passengers and set it to be an empty array.
 
-var stockCar = {model: "Ford", year: 2015, automaticTransmission: true, driver: null, passengers: []};
+var stockCar = {
+	model: "Ford", 
+	year: 2015, 
+	automaticTransmission: true, 
+	driver: null, 
+	passengers: []
+};
 
 console.log (stockCar);
 
@@ -59,16 +66,17 @@ console.log (stockCar);
 //values, then store the return value. Use console.log three times to print the entire object, 
 //just the value at name, and just the value at age.
 
-// var plainPerson = {};
+var plainPerson = {};
 
-// function buildPerson(person, nameString, age) {
-// 	this.person = person;
-// 	this.nameString = nameString;
-// 	this.age = age;
-// }
-// var john = new buildPerson(man, John, 20);
+function buildPerson(person, nameString, age) {
+	person.name = nameString;
+	person.age = age;
 
-// console.log(buildPerson(john));
+	return person;
+}
+
+var addedPerson = buildPerson(plainPerson, "Fred", 18);
+console.log(addedPerson);
 
 // 4.  Display values of objects that are inside an array
 
