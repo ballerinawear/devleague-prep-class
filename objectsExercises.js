@@ -78,6 +78,9 @@ function buildPerson(person, nameString, age) {
 var addedPerson = buildPerson(plainPerson, "Fred", 18);
 console.log(addedPerson);
 
+console.log(addedPerson.name);
+console.log(addedPerson.age);
+
 // 4.  Display values of objects that are inside an array
 
 // Declare a new variable named arrayOfObjects and set it to be this array of objects.
@@ -85,53 +88,83 @@ console.log(addedPerson);
 // Declare a new function named printProcessedOrders and set one parameter called orders. 
 //Within this function you will use console.log to print order details to the page.
 
-// var arrayOfObjects = {
-// 	id: '',
-// 	purchaseDate: '',
-// 	purchaseTotal: ''
-// };
+var arrayOfObjects = [
+  {
+    id: 0,
+    date: "Monday Jan 25 2015 2:01 PM",
+    total: "279.38"
+  },
+  {
+    id: 1,
+    date: "Monday Jan 27 2015 11:31 AM",
+    total: "79.80"
+  },
+  {
+    id: 2,
+    date: "Monday Feb 1 2015 7:56 AM",
+    total: "15.62"
+  },
+  {
+    id: 3,
+    date: "Monday Feb 1 2015 9:43 AM",
+    total: "19.83"
+  },
+  {
+    id: 4,
+    date: "Monday Feb 1 2015 11:08 PM",
+    total: "56.69"
+  },
+  {
+    id: 5,
+    date: "Monday Feb 13 2015 10:22 AM",
+    total: "137.92"
+  },
+  {
+    id: 6,
+    date: "Monday Feb 14 2015 6:54 PM",
+    total: "938.65"
+  },
+  {
+    id: 7,
+    date: "Monday Feb 14 2015 7:17 PM",
+    total: "43.77"
+  },
+  {
+    id: 8,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "28.54"
+  },
+  {
+    id: 9,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "194.33"
+  }
+];
 
-// function printProcessedOrders(id, purchaseDate, purchaseTotal){
-// 	this.id: = id;
-// 	this.purchaseDate = purchaseDate;
-// 	this.purchaseTotal = purchaseTotal;
-// }
-// var order0 = new printProcessedOrders(0, "Monday Jan 25 2015 2:01 PM", 279.38);
+	function printProcessedOrders(orders){
 
-
-// var order0 = {
-// 	id: 0,
-// 	purchaseDate: "Monday Jan 25 2015 2:01 PM",
-// 	purchaseTotal: 279.38
-// };
-
-// var order1 ={
-// 	id: 1,
-// 	purchaseDate: "Monday Jan 27 2015 11:31 AM",
-// 	purchaseTotal: 79.80
-// };
-
-// var order2 = {
-// 	id: 2,
-// 	purchaseDate: "Monday Feb 1 2015 7:56 AM",
-// 	purchaseTotal: 15.62
-// };
-
-// 	function printProcessedOrders(orders){
-// 		console.log(arrayOfObjects);
-// 	}
-
-function arrayOfObjects(idNo, purchaseDate, purchaseTotal){
-	this.idNo = idNo;
-	this.purchaseDate = purchaseDate;
-	this.purchaseTotal= purchaseTotal;
+		for (i=0; i<orders.length; i++){
+			console.log("====");
+			console.log("id: " + orders[i].id);
+			console.log("date: " + orders[i].date);
+			console.log("total: " + orders[i].total);
+	}
 }
 
-var id0 = new arrayOfObjects(0, "Monday Jan 25 2015 2:01 PM", 279.38);
-var id1 = new arrayOfObjects(1, "monday Jan 27 2015 11:31 AM", 79.80);
-var id2 = new arrayOfObjects(2, "Monday Feb 1 2015 7.56 AM", 15.62);
+printProcessedOrders(arrayOfObjects);
 
-console.log(arrayOfObjects(id0));
+
+// function arrayOfObjects(idNo, purchaseDate, purchaseTotal){
+// 	this.idNo = idNo;
+// 	this.purchaseDate = purchaseDate;
+// 	this.purchaseTotal= purchaseTotal;
+// }
+
+// var id0 = new arrayOfObjects(0, "Monday Jan 25 2015 2:01 PM", 279.38);
+// var id1 = new arrayOfObjects(1, "monday Jan 27 2015 11:31 AM", 79.80);
+// var id2 = new arrayOfObjects(2, "Monday Feb 1 2015 7.56 AM", 15.62);
+
+// console.log(arrayOfObjects(id0));
 
 
 // Example output:
@@ -163,9 +196,14 @@ console.log(arrayOfObjects(id0));
 
 // Go ahead and create some more objects and pass them to this function. Have fun with it.
 
-// var newObject =  {num1: a, num2: b, sumab: a + b};
+var newObject =  {a: 3, b: 5, result: 0};
 
-// function 
+function addObjects(object) {
+	object.result = object.a + object.b;
+	return object;
+}
+
+console.log(addObjects(newObject));
 
 // 6.  Print sum function and add as new key-value
 
@@ -184,15 +222,20 @@ console.log(arrayOfObjects(id0));
 
 // 7.  Putting stuff in plainBox
 
-// Declare a function and a single parameter which will be an object. Within this function, write a FOR loop that adds 10 random number values to the array referenced at the contents property of the object being passed in. This function will return the object.
+// Declare a function and a single parameter which will be an object. Within this function, write a FOR loop that adds 
+//10 random number values to the array referenced at the contents property of the object being passed in. 
+//This function will return the object.
 
-// Invoke your function and pass in your object (which should be plainBox), store the result to a variable and use console.log to inspect your results.
+// Invoke your function and pass in your object (which should be plainBox), store the result to a variable and use 
+//console.log to inspect your results.
 
 // 8.  Detecting transmission
 
-// Declare a function and a single parameter which will be an object. Within this function you will check to see if the car has an automatic or manual transmission and print the results on screen.
+// Declare a function and a single parameter which will be an object. Within this function you will check to see if the 
+//car has an automatic or manual transmission and print the results on screen.
 
-// If automaticTransmission is true then print a message saying so. Also, provide an appropriate message for when the its false.
+// If automaticTransmission is true then print a message saying so. Also, provide an appropriate message for when the 
+//its false.
 
 // Invoke your function and pass in your object, store the result to a variable and use console.log to inspect your results.
 
@@ -200,9 +243,12 @@ console.log(arrayOfObjects(id0));
 
 // As you may have noticed that the stockCar doesn't have a driver!
 
-// Declare a function with two parameters. The first parameter will be an object with represents a car, the other will be a person. Within this function, set the driver value of the stockCar to the second parameter being passed into your function.
+// Declare a function with two parameters. The first parameter will be an object with represents a car, the other will 
+//be a person. Within this function, set the driver value of the stockCar to the second parameter being passed into your 
+//function.
 
-// Invoke your function and pass in your objects, store the result, and inspect your results. Consider using plainPerson as your driver.
+// Invoke your function and pass in your objects, store the result, and inspect your results. Consider using 
+//plainPerson as your driver.
 
 // 10.  Call the posse, we ridin'!
 
