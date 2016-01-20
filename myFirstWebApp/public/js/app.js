@@ -7,9 +7,9 @@ function addLastName() {
   lastNameElem.id = 'myLastName';
   lastNameElem.appendChild(lastNameText);
 
-  var myNameElem = docoument.getElementById('myName');
+  var myNameElem = document.getElementById('myName');
 
   myNameElem.appendChild(lastNameElem);
 }
 
-addLastName();
+//addLastName(myName);
