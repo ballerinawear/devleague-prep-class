@@ -220,6 +220,14 @@ console.log(addObjects(newObject));
 // Invoke this function and pass in your object. Further test by changing the values of the object 
 //being passed in or create more objects and invoke your function multiple times.
 
+function newObj(object){
+  
+  console.log(object.a + " + "  + object.b  +  " = " + result);
+}
+  var anotherOject = new object(a: 10, b:67, result:0);
+
+
+
 // 7.  Putting stuff in plainBox
 
 // Declare a function and a single parameter which will be an object. Within this function, write a FOR loop that adds 
@@ -228,6 +236,29 @@ console.log(addObjects(newObject));
 
 // Invoke your function and pass in your object (which should be plainBox), store the result to a variable and use 
 //console.log to inspect your results.
+
+// function randomNumber(){
+//   var randomNumber
+//   return randomNumber[i];
+// }
+
+// function putStuff(box){
+//   var contentsToPut = []; 
+//   for (var i = 0; i < 10; i++){
+//     box.contest.push(randomNumber());
+//   }
+//   box.contents = contentsToPut;
+//   return box;
+// }
+
+// var plainBox = {};
+// plainBox.contents = [];
+// console.log(putStuff(plainBox));
+
+//random number 
+//return Math.random() * 100;
+//return Math.floor(Math.random()*100);    to get whole numbers; use ceiling to go up instead of floor
+//fisher-yates shuffling algorithm  (look up)
 
 // 8.  Detecting transmission
 
@@ -254,7 +285,8 @@ console.log(addObjects(newObject));
 
 // The Dev League instructors want to ride your whip!
 
-// Declare a variable named passengerList and set it to be ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor']
+// Declare a variable named passengerList and set it to be ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 
+//'Nigel', 'Kelli', 'Marifel', 'Victor']
 
 // Declare a variable named passengerAges and set it to be [19, 12, 21, 22, 16, 9, 19, 20, 15]
 
@@ -273,6 +305,42 @@ console.log(addObjects(newObject));
 // Display passengers
 
 // Delcare a function and set one parameter which will be a car. This function should print out each passenger's name and age one line at a time.
+
+var passengerList = ['Jon', 'Jason'];
+var passengerAges = [19,12];
+
+function buildPerson(person,name,age){
+  personname = name;
+  person.age = age;
+  return person;
+
+}
+function weRidin(car, names, ages){
+  car.passengers = car.passengers || []; //in case it is undefined
+  for (var i = 0; i < names.length; i++){
+    var passengers = buildPerson(
+      {};
+      name[i],
+      agens[i]);
+    car.passengers.push(passenger);
+  }
+  return car;
+
+  function displayPassengers(car){
+    for (var i=0; i< car.passengers.length; i++);
+      var passenger = car.passengers[i];
+    console.log(passenger.name + ", age" + passenger.age + ", is riding dirty!");
+  }
+}
+var myCar = {
+  model: 'Chevy',
+  year:2010
+  passengedr: []
+};
+
+console.log(weRidin(myCar, passengerList, passengerAges));
+
+displayPassengers(myCar);
 
 // example output:
 
