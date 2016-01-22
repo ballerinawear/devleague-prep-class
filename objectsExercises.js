@@ -220,13 +220,16 @@ console.log(addObjects(newObject));
 // Invoke this function and pass in your object. Further test by changing the values of the object 
 //being passed in or create more objects and invoke your function multiple times.
 
+newObject.a = 10;
+newObject.b = 67;
+
 function newObj(object){
-  
-  console.log(object.a + " + "  + object.b  +  " = " + result);
+	newObject.result = object.a + object.b;
+	newObject.output = newObject.a + " + "  + newObject.b  +  " = " + newObject.result;
+	return object;
 }
-  var anotherOject = new object(a: 10, b:67, result:0);
-
-
+  console.log(newObj(newObject));
+ 
 
 // 7.  Putting stuff in plainBox
 
@@ -262,24 +265,43 @@ function newObj(object){
 
 // 8.  Detecting transmission
 
-// Declare a function and a single parameter which will be an object. Within this function you will check to see if the 
-//car has an automatic or manual transmission and print the results on screen.
+// Declare a function and a single parameter which will be an object. Within this function you will 
+//check to see if the car has an automatic or manual transmission and print the results on screen.
 
-// If automaticTransmission is true then print a message saying so. Also, provide an appropriate message for when the 
-//its false.
+// If automaticTransmission is true then print a message saying so. Also, provide an appropriate message 
+//or when the its false.
 
-// Invoke your function and pass in your object, store the result to a variable and use console.log to inspect your results.
+// Invoke your function and pass in your object, store the result to a variable and use console.log 
+//to inspect your results.
+
+function carEquipment(automobile) {
+	if (stockCar.automaticTransmission === true){
+		return true;
+	}else {
+		return false;
+	}
+}
+
+console.log(carEquipment(stockCar));
 
 // 9.  Who's driving this thing?!
 
 // As you may have noticed that the stockCar doesn't have a driver!
 
-// Declare a function with two parameters. The first parameter will be an object with represents a car, the other will 
-//be a person. Within this function, set the driver value of the stockCar to the second parameter being passed into your 
-//function.
+// Declare a function with two parameters. The first parameter will be an object with represents a car, 
+//the other will be a person. Within this function, set the driver value of the stockCar to the 
+//second parameter being passed into your function.
 
-// Invoke your function and pass in your objects, store the result, and inspect your results. Consider using 
-//plainPerson as your driver.
+// Invoke your function and pass in your objects, store the result, and inspect your results. Consider 
+//using plainPerson as your driver.
+
+function auto(model, driverName){
+	stockCar.driver = driverName;
+	return  plainPerson;
+}
+
+var myAuto = auto(stockCar.model, plainPerson);
+console.log(myAuto);
 
 // 10.  Call the posse, we ridin'!
 
@@ -306,7 +328,7 @@ function newObj(object){
 
 // Delcare a function and set one parameter which will be a car. This function should print out each passenger's name and age one line at a time.
 
-var passengerList = ['Jon', 'Jason'];
+/*var passengerList = ['Jon', 'Jason'];
 var passengerAges = [19,12];
 
 function buildPerson(person,name,age){
@@ -340,7 +362,7 @@ var myCar = {
 
 console.log(weRidin(myCar, passengerList, passengerAges));
 
-displayPassengers(myCar);
+displayPassengers(myCar);  */
 
 // example output:
 
