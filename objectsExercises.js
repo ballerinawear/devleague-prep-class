@@ -224,11 +224,12 @@ newObject.a = 10;
 newObject.b = 67;
 
 function newObj(object){
+	console.log("'"  + newObject.a + " + "  + newObject.b  +  " = " + newObject.result + "'");
 	newObject.result = object.a + object.b;
-	newObject.output = newObject.a + " + "  + newObject.b  +  " = " + newObject.result;
+	newObject.output = ;
 	return object;
 }
-  console.log(newObj(newObject));
+  console.log(newObj(newObject));  
  
 
 // 7.  Putting stuff in plainBox
@@ -295,13 +296,13 @@ console.log(carEquipment(stockCar));
 // Invoke your function and pass in your objects, store the result, and inspect your results. Consider 
 //using plainPerson as your driver.
 
-function auto(model, driverName){
-	stockCar.driver = driverName;
-	return  plainPerson;
+function auto(car, person){
+	car.driver = person;
+	return  car;
 }
 
-var myAuto = auto(stockCar.model, plainPerson);
-console.log(myAuto);
+
+console.log(auto(stockCar, plainPerson));
 
 // 10.  Call the posse, we ridin'!
 
