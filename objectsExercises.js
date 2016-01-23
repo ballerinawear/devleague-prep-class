@@ -222,11 +222,13 @@ console.log(addObjects(newObject));
 
 newObject.a = 10;
 newObject.b = 67;
+// newObject.result = 0;
 
 function newObj(object){
-	console.log("'"  + newObject.a + " + "  + newObject.b  +  " = " + newObject.result + "'");
 	newObject.result = object.a + object.b;
-	newObject.output = ;
+	console.log("'"  + newObject.a + " + "  + newObject.b  +  " = " + newObject.result + "'");
+	
+	
 	return object;
 }
   console.log(newObj(newObject));  
