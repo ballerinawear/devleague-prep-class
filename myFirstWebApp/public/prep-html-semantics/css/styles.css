@@ -1,0 +1,171 @@
+body{
+	font-family: arial;
+}
+
+#top{
+	text-align: center;
+}
+
+nav ul{
+	list-style-type:none;
+	
+}
+
+nav ul li {
+	display:inline;
+	background-color: #cceeff;
+	padding: 5px;
+	color: green;
+}
+
+nav ul li a{
+		text-decoration: none; /*not working*/
+}
+
+#main{
+	border: 1px solid;
+}
+
+#section1{
+	background-color: #009999;
+	color: #cceeff;
+	padding: 10px 10px 20px 10px;
+	line-height: 0.5;
+}
+
+#section1 date{
+	color: black;	
+}
+
+#section2{
+	background-color: #cceeff;
+	padding: 10px;
+}
+
+#section2 img{
+	float:right;
+	padding-left: 10px;
+}
+
+
+#section3{
+	border: 1px solid;
+
+}
+
+#section3 .div1{
+	background-color: #F0F0F0;
+	padding: 10px;
+	line-height: 0.5;
+}
+
+#section3 .div1 h3{
+	color: #707070;
+}
+
+#section3 .div1 date{
+	color: black;
+}
+
+#section3 .div2 p{
+	padding: 10px;
+}
+
+table{
+	border: 1px solid;
+	margin: 15px;
+	width: 95%;
+	line-height: 1.5;
+}
+
+th{
+	background-color: #F0F0F0;
+	text-align: left;
+}
+
+#section4{
+	border: 1px solid;
+	
+}
+
+#section4 .div1{
+	background-color: #F0F0F0;
+	line-height: 0.5;
+	padding: 10px;
+	color: #707070;
+}
+
+#section4 .div1 date{
+	color: black;
+}
+
+#section4 .div2{
+	line-height: 1.5;
+}
+
+#contact{
+	border: 1px solid;
+
+}
+
+#contact .div1{
+	background-color: #F0F0F0;
+	padding: 10px;
+	line-height: 0.5;
+	color: #707070;
+}
+
+#contact .div1 p{
+	color: black;
+}
+
+#contact .div2{
+	padding: 20px;
+}
+
+#contact .div2 input{
+	width: 95%;
+}
+
+#contact .div3{
+	padding: 20px;
+}
+
+#contact .div4{
+	padding: 20px;
+}
+
+#yesNo{
+	width: 95%;
+}
+
+#yesNo{
+	display: inline-block;
+}
+
+#contact .div5{
+	padding: 20px;
+}
+
+#contact .div6{
+	padding: 20px;
+}
+
+#contact .div6 select{
+	width: 95%;
+}
+
+#contact .div7{
+	padding: 20px;
+}
+
+#blockLine{
+	background-color: #009999;
+	width: 95%;
+	height: 5px;
+}
+
+footer{
+	text-align: center;
+	font-size: 10px;
+}
