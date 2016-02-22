@@ -83,23 +83,18 @@ var eatFood = createFood("Papa", "John", "pizza");
 console.log (eatFood);
 
 
-var howMany = x;
-function printMessage()
-"Can Drink Beer"
-"Let it go"
+//repeater exercise
+var canDrinkBeer = true;
+var howMany = 3;
 
-function repeater(howMany, oldEnough){
-	for(var i = 0; i < howMany; i++){
-		if (odlEnough){
-			consol.log('yay:);
-		}els{
-			concole.log('boo';
-		}
-	}
-}
-
-
-
-
-
+var repeater = function(){
+  for (var i=0; i<howMany; i++){
+  if (canDrinkBeer === true){
+    console.log("Bacon Pancakes, makin' Bacon Pancakes...");
+  }else{
+    console.log("Let it go.... LET IT GOOOOOOoOoOoOo...");
+  }
+  }
+};
+(repeater(howMany));
 
