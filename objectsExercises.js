@@ -15,7 +15,6 @@ var plainBox = {};
 	plainBox.size = 5;
 	plainBox.contents = [];
 
-
 	console.log(plainBox);
 
 // function plainBox() {
@@ -378,4 +377,6 @@ displayPassengers(myCar);  */
 // 'Kelli, age 19, is riding dirty!'
 // 'Marifel, age 19, is riding dirty!'
 // 'Victor, age 19, is riding dirty!'
+
+
 
