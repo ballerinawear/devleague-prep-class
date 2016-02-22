@@ -167,7 +167,6 @@ for (var i = 0; i < arrNumbers.length; i++){
 	totalNumber += arrNumbers[i];
 		console.log(totalNumber);
 	}
-	
 }
 addIt(totalNumber);
 
