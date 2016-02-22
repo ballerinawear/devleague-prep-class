@@ -155,7 +155,7 @@ var isNapTime = false;
 var napSchedule = [false, false, true, false, true, true];
 
 function nap(schedule){
-	if (schedule=== true){
+	if (schedule === true){
 			console.log("ZzZzZzZz");
 		} else {
 			console.log("Gotta get to work!");
