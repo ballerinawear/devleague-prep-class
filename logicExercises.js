@@ -151,7 +151,19 @@ var createArrayFromString = function(word){
 		}
 	}
 };
-createArrayFromString("Aloha");
+createArrayFromString("Aloha");  //need to use push method
+
+/*var word = "aloha";
+var string = [];
+var createArray = function(word){
+  for (var i=0; i<word.length; i++){
+    if (word[i] !== 'a'){
+      string.push(word[i]);
+      console.log(string);
+    }
+  }
+};
+createArray(word);*/
 
 
 // Function - greatSummator
@@ -163,8 +175,8 @@ var totalNumber = 0;
 var greatSummator = function(total){
 	for (var i = 0; i < arrNumbers.length; i++){
 		totalNumber += arrNumbers[i];
-		console.log(totalNumber);
 	}
+		console.log(totalNumber);
 };
 greatSummator(arrNumbers);
 
@@ -193,8 +205,24 @@ totalUnderWhatFor(sumTotal);
 //loop to call our isTrue function with each value as input and return true if all values return 
 //true from our isTrue function.
 
+function isTrue (bool){
+	return bool ===true;
+}
+var someArr = [true, false,true];
+var someArr2 = [true, true, true];
 
+function checkTrueValue(arr){
+	for (var i = 0; i < arr.length; i++){
+		if (!isTrue(arr[i])){
+			return false;
+	
+		}
+	}
+return true;
+}
 
+console.log(checkTrueValue(someArr));
+console.log(checkTrueValue(someArr2));
 
 
 
