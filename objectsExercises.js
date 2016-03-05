@@ -201,21 +201,17 @@ function addObjects(object) {
 	object.result = object.a + object.b;
 	return object;
 }
-
 console.log(addObjects(newObject));
 
 // 6.  Print sum function and add as new key-value
-
 // Declare a new function and a single parameter which will be the object from the challenge just above.
 // Within this function you are to print to the screen a message of the operation performed.
 // For Example:
-
 // // if this object was passed into your function: { a: 10, b:67, result: 77 }
 // // it should print a message saying
 // '10 + 67 = 77'
 // Before returning this object, add a new property to it named output and set it to be the message 
 //that was printed out.
-
 // Invoke this function and pass in your object. Further test by changing the values of the object 
 //being passed in or create more objects and invoke your function multiple times.
 
