@@ -43,6 +43,7 @@ var newPerson = buildPerson(plainPerson, 'Daniel', 20);
 console.log(newPerson);
 console.log(newPerson.name);
 console.log(newPerson.age);
+console.log(plainPerson);
 
 // Finally, invoke your new function while passing in the plainPerson object and additional 
 //agrument values, then store the return value. Use console.log three times to print the entire
@@ -156,7 +157,7 @@ addItUp.b = 67;
 
 var equation = function(result){
 	addItUp.result = addItUp.a + addItUp.b;
-	console.log(addItUp.a + ' + ' + addItUp.b + " = " +  addItUp.result);
+	addItUp.output = console.log(addItUp.a + ' + ' + addItUp.b + " = " +  addItUp.result);
 	return result;
 };
 equation(addItUp);
@@ -172,36 +173,59 @@ equation(addItUp);
 // Invoke your function and pass in your object (which should be plainBox), store the result to 
 //a variable and use console.log to inspect your results.
 
-
+function putStuff(object){
+    object = {}; //need to do this to reset this
+    object.contents = [];
+  for (var i=0; i<10; i++){
+   
+    var randNum = Math.floor((Math.random()*10)+1);
+    object.contents.push(randNum);
+  }
+  return object;
+}
+console.log(putStuff(plainBox));
 
 // 8.  Detecting transmission
-
 // Declare a function and a single parameter which will be an object. Within this function you will check to see if the car has an automatic or manual transmission and print the results on screen.
-
 // If automaticTransmission is true then print a message saying so. Also, provide an appropriate message for when the its false.
-
 // Invoke your function and pass in your object, store the result to a variable and use console.log to inspect your results.
 
-// Who's driving this thing?!
+function trans(autoTrans){
+  if (stockCar.automaticTransmission ===true){
+    console.log("This car has automatic transmission.");
+  }else{
+    console.log("This car has manual transmission");
+  }
+}
+trans(stockCar);
+
+// 9.  Who's driving this thing?!
 
 // As you may have noticed that the stockCar doesn't have a driver!
-
 // Declare a function with two parameters. The first parameter will be an object with represents a car, the other will be a person. Within this function, set the driver value of the stockCar to the second parameter being passed into your function.
 
 // Invoke your function and pass in your objects, store the result, and inspect your results. Consider using plainPerson as your driver.
 
-// Final Boss
-// final-boss
+function whosDriving(aCar, aPerson){
+  //aPerson = plainPerson.name;
+  stockCar.driver = aPerson;
+  
+  console.log(aPerson + " is driving a " + aCar);
+  return aPerson;
+}
+whosDriving(stockCar.model, plainPerson.name);
 
-// Call the posse, we ridin'!
-
-// The Dev League instructors want to ride your whip!
+// 10.  Final Boss
+// Call the posse, we ridin'!  The Dev League instructors want to ride your whip!
 
 // Declare a variable named passengerList and set it to be ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor']
-
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
 // Declare a variable named passengerAges and set it to be [19, 12, 21, 22, 16, 9, 19, 20, 15]
-
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
 // Declare a function and three parameters. The first will be a car and the second will be an array of names and the third will be an array of ages. The names and ages are in sequence, e.g. "Jon" is "19", "Jason" is "12".
+function whoRides(car, nameArr, ageArr){
+
+}
 
 // In the end you will return the car but within the function...
 
@@ -210,9 +234,7 @@ equation(addItUp);
 // You should iterate through the names and ages, pass the values to your buildPerson function to build person objects (remember that this function returns a new object). Don't forget that this function actually takes three arguments, how will you handle that? (you should not have to change your function).
 
 // Example of a loaded Car:
-
 // loaded-car
-
 // Display passengers
 
 // Delcare a function and set one parameter which will be a car. This function should print out each passenger's name and age one line at a time.
@@ -228,3 +250,29 @@ equation(addItUp);
 // 'Kelli, age 19, is riding dirty!'
 // 'Marifel, age 19, is riding dirty!'
 // 'Victor, age 19, is riding dirty!'
+
+function whoRides(car, names, ages){
+ 
+  for (var i=0; i<names.length; i++){
+     var rider = {};
+     buildPerson(rider, names[i], ages[i]);
+    car.passengers.push(rider);
+ 
+  }return car;
+}
+whoRides(stockCar, passengerList, passengerAges);
+console.log(stockCar.passengers);
+
+function listRiders(car){
+  for (var i=0; i<car.passengers.length; i++){
+     var rider = car.passengers[i];
+    //rider.push(car.passengers[i]);
+    console.log(rider.name + ', age '+ rider.age + ', is riding dirty!');
+  }
+}
+listRiders(stockCar);
+
+
+
+
+
