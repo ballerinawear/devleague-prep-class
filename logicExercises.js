@@ -153,6 +153,19 @@ var createArrayFromString = function(word){
 };
 createArrayFromString("Aloha");  //need to use push method
 
+//can do this
+var word = "Aloha";
+var word2 = [];
+function noAs(a, b){
+  for (var i=0; i<a.length; i++){
+    if (a[i] !== 'A'){
+      b.push(a[i]);
+    }
+  }console.log(b);
+}
+
+noAs(word, word2);
+
 /*var word = "aloha";
 var string = [];
 var createArray = function(word){
@@ -214,6 +227,26 @@ var someArr2 = [true, true, true];
 function checkTrueValue(arr){
 	for (var i = 0; i < arr.length; i++){
 		if (!isTrue(arr[i])){
+			return false;
+	
+		}
+	}
+return true;
+}
+
+console.log(checkTrueValue(someArr));
+console.log(checkTrueValue(someArr2));
+
+//example 2
+function isTrue (bool){
+	return bool ===true;
+}
+var someArr = [true, false,true];
+var someArr2 = [true, true, true];
+
+function checkTrueValue(arr){
+	for (var i = 0; i < arr.length; i++){
+		if (isTrue(arr[i])===false){
 			return false;
 	
 		}
