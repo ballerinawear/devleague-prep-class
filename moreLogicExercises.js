@@ -23,7 +23,15 @@ presidentList(presidents);
 // bonus: could you take the code inside of this FOR loop and encapsulate it inside of a 
 //function called printContent and still achieve the same result? This new function should 
 //accept two parameters.
+var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"];
 
+function presList(value, index){
+  for (var i=0; i<index.length; i++){
+    console.log("The "+ [i] + " president is "+ index[i]);
+  }
+}
+
+presList(i, presidents);
 
 // The String of Numbers
 // Declare a variable named stringOfNumbers and set it's value to '' (an empty String).
@@ -42,6 +50,14 @@ console.log(stringOfNumbers);
 //look like this 1011121314151617181920
 // bonus: could you take the code inside of this FOR loop and encapsulate it inside of a 
 //function called appendToString and still achieve the same result?
+var stringNumbers = '';
+function appendToString(){
+  for (var i=10; i<=20; i++){
+    stringNumbers += i;
+  }
+  console.log(stringNumbers);
+}
+appendToString(stringNumbers);//not sure what difference is
 
 // Add only even numbrs to an array
 // Declare a variable named evenNumberArray.
@@ -54,6 +70,16 @@ for (var i=0; i < 100; i++){
 	}
 }
 console.log(evenNumberArray);
+
+//also can do this
+var evenNumberArray = [];
+var evenNumbers = function(){
+  for (var i=0; i<100; i+=2){
+  evenNumberArray += i;
+}
+  console.log(evenNumberArray);
+};
+evenNumbers(evenNumberArray);
 
 // Accessing only the odd indexes of an Array - 'Not Even Brah'
 // Someone forgot to fill out this array! Oh noes...
@@ -77,6 +103,7 @@ console.log(oopsArray);
 //value in the Array.
 
 for (var i=oopsArray.length-1; i>=0; i-=1){  //don't understand this one
+	//maybe don't need -1 (length-1)
 	console.log(oopsArray[i]);
 }
 // example output:
@@ -156,6 +183,17 @@ var generateArrayOfStrings = function(storage){
 	}return storedValue;
 };
 console.log(generateArrayOfStrings(miscStorage));
+//also can do this
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush'];
+function generateArray(storage){
+  var tempStorage = [];
+  for (var i=0; i<storage.length; i++){
+    if (typeof(storage[i])==='string'){
+      tempStorage.push(storage[i]);
+    }
+  }return tempStorage;
+}
+console.log(generateArray(miscStorage));
 
 // Final Form - Change values of objects stored within an Array
 // It's that time again, we need to graduate the current class of students and start enrollment 
@@ -201,14 +239,19 @@ var currentClass = [
 // Declare a function named graduateAndSetNewClass, it takes a single argument called class.
 var graduateAndSetNewClass = function(myClass){ //don't get this one
 	for (var i=0; i<myClass.length; i++){
-		if (myClass.enrolled[i]===true){
-			return myClass.graduated===true;
+		var student = myClass[i];
+		if (student.enrolled){
+			student.graduated=true;
 		}else{
-			return myClass.graduated===false;
+			student.enrolled=true;
 		}
 	}
 
 };
+
+console.log(currentClass);
+graduateAndSetNewClass(currentClass);
+console.log(currentClass);
 // Your function will iterate through the class argument and check each student's enrolled 
 //property.
 
