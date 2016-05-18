@@ -43,33 +43,47 @@ bigBox.appendChild(catBox2);
 
 //Exercise 3
 /*Your objective is to display the following getBuckets array into the document. 
-Declare a variable named bucketList and assign its value with the createElement method that will create a 'li' element (list item).
+Declare a variable named bucketList and assign its value with the createElement 
+method that will create a 'li' element (list item).
 Assign the "li" element with a class name of "daList"
 Each "li" element will show an item from the data collection
-Append the "li" elements inside the "buckets" div that have been already created in the index.html file*/
+Append the "li" elements inside the "buckets" div that have been already created 
+in the index.html file*/
 
 /*Helpful Hints:
 element.className is a property that sets or returns the class name of an element*/
 
 var getBuckets = ["Become more famous than that overrated fraud Garfield", "Visit Aoshima (aka Japan's Cat Island)", "Exhaust my entire 9 lives", "Pass DevLeague's coding challenge", "Become the next internet sensation"];
 
+for (var i=0; i<getBuckets.length; i++){
+		console.log(getBuckets[i]);
+	
 
+var bucketList = document.createElement('li');
+    bucketList.className = "daList";
+	bucketList.innerHTML = getBuckets[i];
+	buckets.appendChild(bucketList);
+}
 
 //Exerise 4
-/*Our motivated Tacocat has been hard at work on its bucket list.  Update the current list to the following:
+/*Our motivated Tacocat as been hard at work on its bucket list.  Update the current list
+to the following:
 "Become more famous than that overrated fraud Garfield" => "I'm coming for you Felix!"
 
 Declare a variable named changeList and assign it to the getElementsByTagName method.
 */
 
-
+var changeList = document.getElementsByTagName('li');
+	changeList[0].innerHTML = "I'm coming for you Felix!";
 
 //Exercise 5
-/*Declare a variable named changeListAgain and assign it to the getElementsByClassName method. Update the current list to the following:
+/*Declare a variable named changeListAgain and assign it to the getElementsByClassName 
+method. Update the current list to the following:
 
 "Exhaust my entire 9 lives" => "I got 1 life to live!"*/
 
-
+var changeListAgain = document.getElementsByClassName("daList");
+	changeListAgain[2].innerHTML = "I got 1 life to live!";
 
 };
 
